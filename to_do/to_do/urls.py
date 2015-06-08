@@ -20,5 +20,6 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', TemplateView.as_view(template_name='todo.html')),
+    url(r'^$', 'todo_app.views.login.login_user'),
+    url(r'^notes/$', 'todo_app.views.login.notas'),
 ]
