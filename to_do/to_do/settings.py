@@ -20,12 +20,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'iu66va)prm9bw=hx^*l2fs=@syer$)vnjg3yj#)y)8if%j(%0o'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+LANGUAGE_CODE = 'es-GT'
+TIME_ZONE = 'America/Guatemala'
 
 
 # Application definition
@@ -37,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'todo_app'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -100,3 +104,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+from .local_settings import *

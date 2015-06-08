@@ -1,0 +1,80 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background: #F5F7FA;
+}
+
+header{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 15px;
+    color: white;
+    background:#34495E;
+}
+.wrapper
+{
+    width: 800px;
+    height: 800px;
+    margin: 0px auto;
+    background: #f4f4f4;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+form
+{
+    width: 520px;
+    margin: 0 auto;
+}
+.text{
+    width: 400px;
+    margin: 30px auto;
+    height: 40px;
+    padding: 5px;
+    border: solid 1px #BDC3C7;
+    font-size: 16px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 2px rgba(0,0,0,0.18);
+}
+.btn
+{
+    border: none;
+    padding: 11px 25px;
+    background: #2ECC71;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 2px rgba(0,0,0,0.18);
+}
+.card{
+    width: 800px;
+    height: 60px;
+    margin: 0px auto;
+    border-bottom: 1px solid #656D78;
+    background: #434A54;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.16), 0 1px 2px rgba(0,0,0,0.18);
+}
+.btn-list{
+    padding-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    height: 45px;
+    width: 60px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    margin-left: -5px;
+}
+.edit{
+    background: #F1C40F;
+}
+.delete{
+    background: #E74C3C;
+}
+.content
+{
+    display: inline-block;
+    width: 646px;
+    padding-left: 35px;
+    color: white;
+    vertical-align: middle;
+    font-size: 20px;
+}
