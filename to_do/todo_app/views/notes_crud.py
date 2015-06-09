@@ -1,11 +1,10 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from todo_app.models import *
 
 
 @login_required(login_url='/')
 def save_note(request):
-    notas = Notes.objects.filter(user_id = request.user.id)
-    context={
-        'listado' : notas,
-        'usuario': request.user.first_name+" "+request.user.last_name
-    }
-    return render_to_response('todo.html',context)
+    print request.POST['note_content']
+    note = Note.objects.create(note_content=request.POST['note_content'])
+    print note.pk

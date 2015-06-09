@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'todo_app.views.login.login_user'),
     url(r'^notes/$', 'todo_app.views.login.notas'),
+    url(r'^create/$', 'todo_app.views.notes_crud.save_note'),
 ]
