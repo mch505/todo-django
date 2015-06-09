@@ -12,7 +12,8 @@
             <span class="usuario">Hola, {{ usuario }}</span>
         </header>
         <div class="wrapper">
-            <form action="/create/" name="CreateNote" method="post">{% csrf_token %}
+            <form action="/create/" name="CreateNote" method="post">
+                {% csrf_token %}
                 <input class="text" type="text" placeholder="Ingese el contenido" id="note_content" name="note_content">
                 <input class="btn" type="submit" value="Agregar">
             </form>

@@ -4,6 +4,8 @@ from django.template import RequestContext
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from todo_app.models import *
+from django.shortcuts import render
+
 
 def login_user(request):
     logout(request)
@@ -16,7 +18,7 @@ def login_user(request):
             if user.is_active:
                 login(request, user)
                 return HttpResponseRedirect('/notes/')
-    return render_to_response('login.html', context_instance=RequestContext(request))
+    return render(request,'login.html', context_instance=RequestContext(request))
 
 @login_required(login_url='/')
 def notas(request):
@@ -25,4 +27,4 @@ def notas(request):
         'listado' : notas,
         'usuario': request.user.first_name+" "+request.user.last_name
     }
-    return render_to_response('todo.html',context)
+    return render(request,'todo.html',context)
